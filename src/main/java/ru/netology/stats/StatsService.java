@@ -55,7 +55,7 @@ public class StatsService {
         double middleSum = sumMiddleSalesInMonth(sales);
 
         for (int sale : sales){
-            if (sale <= middleSum){
+            if (sale >= middleSum){
                 monthMaxMiddleSales++;
             }
         }
