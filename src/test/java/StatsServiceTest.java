@@ -7,8 +7,8 @@ public class StatsServiceTest {
     public void testMaxMiddleSales() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 6;
-        int actual = service.salesMaxMiddle(sales);
+        int expected = 7;
+        int actual = service.salesMaxMiddleInMonth(sales);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -31,7 +31,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void testMaxSales() {
+    public void testMaxSalesInMonth() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 8;
@@ -52,7 +52,7 @@ public class StatsServiceTest {
     public void testSalesMinMiddleInMonth() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 9;
+        int expected = 7;
         int actual = service.salesMinMiddleInMonth(sales);
         Assertions.assertEquals(expected, actual);
 

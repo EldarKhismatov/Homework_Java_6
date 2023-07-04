@@ -39,25 +39,27 @@ public class StatsService {
 
     public int salesMinMiddleInMonth(int[] sales) {
         int monthMinMiddleSales = 0;
+        double middleSum = sumMiddleSalesInMonth(sales);
 
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < sales[monthMinMiddleSales]) {
-                monthMinMiddleSales = i;
+        for (int sale : sales){
+            if (sale <= middleSum){
+                monthMinMiddleSales++;
             }
         }
-        return monthMinMiddleSales + 1;
+        return monthMinMiddleSales;
 
     }
 
-    public int salesMaxMiddle(int[] sales) {
+    public int salesMaxMiddleInMonth(int[] sales) {
         int monthMaxMiddleSales = 0;
+        double middleSum = sumMiddleSalesInMonth(sales);
 
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > sales[monthMaxMiddleSales]) {
-                monthMaxMiddleSales = i;
+        for (int sale : sales){
+            if (sale <= middleSum){
+                monthMaxMiddleSales++;
             }
         }
-        return monthMaxMiddleSales + 1;
+        return monthMaxMiddleSales;
 
     }
 }
